@@ -24,3 +24,5 @@
 ## Notes
 
 - `Testing.java` produces a file `test_results.csv` which shows the `average running times` in `ms` of the program using different parameters
+- See program design <a href='https://github.com/rjperez94/Gene-Matcher/blob/master/classdiagram.png'>here</a>
+- See proof, results and algorithm <a href='https://github.com/rjperez94/Gene-Matcher/blob/master/Report.pdf'></a>
