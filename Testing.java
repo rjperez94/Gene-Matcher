@@ -69,7 +69,7 @@ public class Testing {
 			String descendant = generator.mutate(dna, mutationCounter);
 
 			long start = System.currentTimeMillis();
-			DynamicProgramming dpr = new DynamicProgramming(dna, descendant);
+			DynamicProgramming dpr = new DynamicProgramming(null, dna, descendant);
 			times.get(currentHashID).add(System.currentTimeMillis() - start);
 			System.out.println(dpr.alignmentScore());
 
@@ -85,7 +85,7 @@ public class Testing {
 			String descendant = generator.mutate(dna, mutationCounter);
 			
 			long start = System.currentTimeMillis();
-			DynamicProgramming dpr = new DynamicProgramming(dna, descendant);
+			DynamicProgramming dpr = new DynamicProgramming(null, dna, descendant);
 			times.get(currentHashID).add(System.currentTimeMillis() - start);
 			System.out.println(dpr.alignmentScore());
 
@@ -101,7 +101,7 @@ public class Testing {
 			String descendant = generator.mutate(dna, mutationCounter);
 
 			long start = System.currentTimeMillis();
-			DynamicProgramming dpr = new DynamicProgramming(dna, descendant);
+			DynamicProgramming dpr = new DynamicProgramming(null, dna, descendant);
 			times.get(currentHashID).add(System.currentTimeMillis() - start);
 			System.out.println(dpr.alignmentScore());
 
@@ -117,7 +117,7 @@ public class Testing {
 			String descendant = generator.mutate(dna, mutationCounter);
 
 			long start = System.currentTimeMillis();
-			DynamicProgramming dpr = new DynamicProgramming(dna, descendant);
+			DynamicProgramming dpr = new DynamicProgramming(null, dna, descendant);
 			times.get(currentHashID).add(System.currentTimeMillis() - start);
 			System.out.println(dpr.alignmentScore());
 
@@ -133,7 +133,7 @@ public class Testing {
 			String descendant = generator.mutate(dna, mutationCounter);
 
 			long start = System.currentTimeMillis();
-			DynamicProgramming dpr = new DynamicProgramming(dna, descendant);
+			DynamicProgramming dpr = new DynamicProgramming(null, dna, descendant);
 			times.get(currentHashID).add(System.currentTimeMillis() - start);
 			System.out.println(dpr.alignmentScore());
 
@@ -147,7 +147,7 @@ public class Testing {
 			String dna = generator.generate(100);
 
 			long start = System.currentTimeMillis();
-			DynamicProgramming dpr = new DynamicProgramming(dna, dna);
+			DynamicProgramming dpr = new DynamicProgramming(null, dna, dna);
 			times.get(currentHashID).add(System.currentTimeMillis() - start);
 			System.out.println(dpr.alignmentScore());
 		}
@@ -159,7 +159,7 @@ public class Testing {
 			String dna = generator.generate(1000);
 
 			long start = System.currentTimeMillis();
-			DynamicProgramming dpr = new DynamicProgramming(dna, dna);
+			DynamicProgramming dpr = new DynamicProgramming(null, dna, dna);
 			times.get(currentHashID).add(System.currentTimeMillis() - start);
 			System.out.println(dpr.alignmentScore());
 		}
@@ -171,7 +171,7 @@ public class Testing {
 			String dna = generator.generate(2000);
 
 			long start = System.currentTimeMillis();
-			DynamicProgramming dpr = new DynamicProgramming(dna, dna);
+			DynamicProgramming dpr = new DynamicProgramming(null, dna, dna);
 			times.get(currentHashID).add(System.currentTimeMillis() - start);
 			System.out.println(dpr.alignmentScore());
 		}
@@ -183,7 +183,7 @@ public class Testing {
 			String dna = generator.generate(3000);
 
 			long start = System.currentTimeMillis();
-			DynamicProgramming dpr = new DynamicProgramming(dna, dna);
+			DynamicProgramming dpr = new DynamicProgramming(null, dna, dna);
 			times.get(currentHashID).add(System.currentTimeMillis() - start);
 			System.out.println(dpr.alignmentScore());
 		}
@@ -195,7 +195,7 @@ public class Testing {
 			String dna = generator.generate(3500);
 
 			long start = System.currentTimeMillis();
-			DynamicProgramming dpr = new DynamicProgramming(dna, dna);
+			DynamicProgramming dpr = new DynamicProgramming(null, dna, dna);
 			times.get(currentHashID).add(System.currentTimeMillis() - start);
 			System.out.println(dpr.alignmentScore());
 		}
@@ -208,7 +208,7 @@ public class Testing {
 			String reversed = reverse(dna);
 
 			long start = System.currentTimeMillis();
-			DynamicProgramming dpr = new DynamicProgramming(dna, reversed);
+			DynamicProgramming dpr = new DynamicProgramming(null, dna, reversed);
 			times.get(currentHashID).add(System.currentTimeMillis() - start);
 			System.out.println(dpr.alignmentScore());
 		}
@@ -221,7 +221,7 @@ public class Testing {
 			String reversed = reverse(dna);
 
 			long start = System.currentTimeMillis();
-			DynamicProgramming dpr = new DynamicProgramming(dna, reversed);
+			DynamicProgramming dpr = new DynamicProgramming(null, dna, reversed);
 			times.get(currentHashID).add(System.currentTimeMillis() - start);
 			System.out.println(dpr.alignmentScore());
 		}
@@ -234,7 +234,7 @@ public class Testing {
 			String reversed = reverse(dna);
 
 			long start = System.currentTimeMillis();
-			DynamicProgramming dpr = new DynamicProgramming(dna, reversed);
+			DynamicProgramming dpr = new DynamicProgramming(null, dna, reversed);
 			times.get(currentHashID).add(System.currentTimeMillis() - start);
 			System.out.println(dpr.alignmentScore());
 		}
@@ -247,7 +247,7 @@ public class Testing {
 			String reversed = reverse(dna);
 
 			long start = System.currentTimeMillis();
-			DynamicProgramming dpr = new DynamicProgramming(dna, reversed);
+			DynamicProgramming dpr = new DynamicProgramming(null, dna, reversed);
 			times.get(currentHashID).add(System.currentTimeMillis() - start);
 			System.out.println(dpr.alignmentScore());
 		}
@@ -260,7 +260,7 @@ public class Testing {
 			String reversed = reverse(dna);
 
 			long start = System.currentTimeMillis();
-			DynamicProgramming dpr = new DynamicProgramming(dna, reversed);
+			DynamicProgramming dpr = new DynamicProgramming(null, dna, reversed);
 			times.get(currentHashID).add(System.currentTimeMillis() - start);
 			System.out.println(dpr.alignmentScore());
 		}
@@ -273,7 +273,7 @@ public class Testing {
 			String dna2 = generator.generate(dna.length() / 2);
 
 			long start = System.currentTimeMillis();
-			DynamicProgramming dpr = new DynamicProgramming(dna, dna2);
+			DynamicProgramming dpr = new DynamicProgramming(null, dna, dna2);
 			times.get(currentHashID).add(System.currentTimeMillis() - start);
 			System.out.println(dpr.alignmentScore());
 		}
@@ -286,7 +286,7 @@ public class Testing {
 			String dna2 = generator.generate(dna.length() / 2);
 
 			long start = System.currentTimeMillis();
-			DynamicProgramming dpr = new DynamicProgramming(dna, dna2);
+			DynamicProgramming dpr = new DynamicProgramming(null, dna, dna2);
 			times.get(currentHashID).add(System.currentTimeMillis() - start);
 			System.out.println(dpr.alignmentScore());
 		}
@@ -299,7 +299,7 @@ public class Testing {
 			String dna2 = generator.generate(dna.length() / 2);
 
 			long start = System.currentTimeMillis();
-			DynamicProgramming dpr = new DynamicProgramming(dna, dna2);
+			DynamicProgramming dpr = new DynamicProgramming(null, dna, dna2);
 			times.get(currentHashID).add(System.currentTimeMillis() - start);
 			System.out.println(dpr.alignmentScore());
 		}
@@ -312,7 +312,7 @@ public class Testing {
 			String dna2 = generator.generate(dna.length() / 2);
 
 			long start = System.currentTimeMillis();
-			DynamicProgramming dpr = new DynamicProgramming(dna, dna2);
+			DynamicProgramming dpr = new DynamicProgramming(null, dna, dna2);
 			times.get(currentHashID).add(System.currentTimeMillis() - start);
 			System.out.println(dpr.alignmentScore());
 		}
@@ -325,7 +325,7 @@ public class Testing {
 			String dna2 = generator.generate(dna.length() / 2);
 
 			long start = System.currentTimeMillis();
-			DynamicProgramming dpr = new DynamicProgramming(dna, dna2);
+			DynamicProgramming dpr = new DynamicProgramming(null, dna, dna2);
 			times.get(currentHashID).add(System.currentTimeMillis() - start);
 			System.out.println(dpr.alignmentScore());
 		}

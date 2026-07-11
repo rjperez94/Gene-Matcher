@@ -17,6 +17,11 @@
 10. Choose `jUnit 4` as the version
 11. Click `Finish`
 
+### Linking the UI Library
+
+12. Right click on your `Java Project` --> `Build Path` --> `Add External Archives`
+13. Select `ecs100.jar` and link it to the project. That JAR will be in the directory where you downloaded ZIP
+
 ## Running the program
 
 1. Right click on your `Java Project` --> `Run As` --> `Java Application`

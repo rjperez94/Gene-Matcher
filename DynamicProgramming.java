@@ -1,4 +1,8 @@
+import ecs100.UI;
+
 public class DynamicProgramming {
+	private UI ui;
+
 	public String sequence1;
 	public String sequence2;
 	
@@ -9,7 +13,9 @@ public class DynamicProgramming {
 	public Cell[][] matrix;
 	public String[] alignments;	
 
-	public DynamicProgramming(String sequence1, String sequence2) {
+	public DynamicProgramming(UI ui, String sequence1, String sequence2) {
+		this.ui = ui;
+
 		this.sequence1 = sequence1;
 		this.sequence2 = sequence2;
 		this.matrix = new Cell[sequence2.length() + 1][sequence1.length() + 1];
@@ -120,25 +126,25 @@ public class DynamicProgramming {
 		alignments = new String[] { align1Buf.toString(), align2Buf.toString() };
 	}
 
-	private void printScoreTable() {
+	protected void printScoreTable() {
 		for (int i = 0; i < sequence2.length() + 2; i++) {
 			for (int j = 0; j < sequence1.length() + 2; j++) {
 				if (i == 0) {
 					if (j == 0 || j == 1) {
-						System.out.print("  ");
+						print("  ");
 					} else {
 						if (j == 2) {
-							System.out.print("     ");
+							print("     ");
 						} else {
-							System.out.print("   ");
+							print("   ");
 						}
-						System.out.print(sequence1.charAt(j - 2));
+						print(""+sequence1.charAt(j - 2));
 					}
 				} else if (j == 0) {
 					if (i == 1) {
-						System.out.print("  ");
+						print("  ");
 					} else {
-						System.out.print(" " + sequence2.charAt(i - 2));
+						print(" " + sequence2.charAt(i - 2));
 					}
 				} else {
 					String toPrint = " ";
@@ -146,18 +152,18 @@ public class DynamicProgramming {
 					int score = currentCell.value;
 					String s = String.format("%1$3d", score);
 					toPrint += s;
-					System.out.print(toPrint);
+					print(toPrint);
 				}
 
-				System.out.print(' ');
+				print(" ");
 			}
-			System.out.println();
+			println("");
 		}
 	}
 	
 	public String alignmentScore() {		
 		for (String string : alignments) {
-			System.out.println(string);
+			println(string);
 		}
 
 		int score = 0;
@@ -179,10 +185,20 @@ public class DynamicProgramming {
 
 		return rep+" ("+score+")";
 	}
-	
-	public static void main(String[] args) {
-		DynamicProgramming dpr = new DynamicProgramming("CAATGTGAATC", "GATCGGCAT");
-		dpr.printScoreTable();
-		System.out.println(dpr.alignmentScore());
+
+	private void println(String string) {
+		if (ui == null) {
+			System.out.println(string);
+		} else {
+			ui.println(string);
+		}
+	}
+
+	private void print(String string) {
+		if (ui == null) {
+			System.out.print(string);
+		} else {
+			ui.print(string);
+		}
 	}
 }

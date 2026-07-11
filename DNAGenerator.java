@@ -5,16 +5,6 @@ public class DNAGenerator {
    private char[] nucleotides = new char[] { 'A', 'C', 'G', 'T' };
    private Random r = new Random();
 
-   public static void main(String[] args) {
-      DNAGenerator generator = new DNAGenerator();
-      String ancestor = generator.generate(8);
-      String descendant1 = generator.mutate(ancestor, 4);
-      String descendant2 = generator.mutate(ancestor, 12);
-      System.out.println("Ancestor:   " + ancestor);
-      System.out.println("Descendant: " + descendant1);
-      System.out.println("Descendant: " + descendant2);
-   }
-
    public String generate(int length) {
       StringBuffer buf = new StringBuffer(length);
       for (int i = 0; i < length; i++) {
